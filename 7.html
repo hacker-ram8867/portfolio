@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information Form</title>
+</head>
+<body>
+    <h1>Student Information Form</h1>
+    <form>
+        <fieldset>
+            <legend><b>Personal Information</b></legend>
+             <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" 
+             pattern="^[A-Za-z]{0,49}$" 
+             title="First name should only contain letters and must be 1-50 characters long." 
+             required>
+             <input type="submit" value="Submit">
+             <br>
+             <br>
+            <label for="fullName">Full Name:</label><br>
+            <input type="text" id="fullName" name="fullName"><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password"><br><br>
+
+            <label for="dob">Date of Birth: dd/mm/yyyy</label><br>
+            <input type="date" id="dob" name="dob"><br><br>
+
+            <label for="shortBio">Short Bio:</label><br>
+            <textarea id="shortBio" name="shortBio" rows="4" cols="50" placeholder="Tell us about yourself..."></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend><b></b>Gender</legend>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+        </fieldset>
+
+        <fieldset>
+            <legend><b>Areas of Interest</b></legend>
+            <input type="checkbox" id="webDev" name="interest" value="webDevelopment">
+            <label for="webDev">Web Development</label><br>
+            <input type="checkbox" id="ai" name="interest" value="artificialIntelligence">
+            <label for="ai">Artificial Intelligence</label><br>
+            <input type="checkbox" id="dataScience" name="interest" value="dataScience">
+            <label for="dataScience">Data Science</label>
+        </fieldset>
+
+        <fieldset>
+            <legend><b>Programming Skill Level</b></legend>
+            <label for="skillLevel">Rate your skill (0 to 10):</label>
+            <input type="range" id="skillLevel" name="skillLevel" min="0" max="10" value="5">
+        </fieldset>
+
+        <fieldset>
+            <legend><b>Upload Your Photo</b></legend>
+            <input type="file" id="photo" name="photo">
+        </fieldset>
+        <br>
+        <button type="submit">SUBMIT</button>
+        <button type="reset">RESET</button>
+    </form>
+</body>
+</html>
